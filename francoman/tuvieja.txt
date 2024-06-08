@@ -1,0 +1,67 @@
+Demostrar P(5) => (P(-3) <=> P(5 * (-3)))
+1. ∀z ∀y: (P(z) ∧ P(y) => P(z * y))	            	
+2. ∀y ∀w: (P(y) ∧ ¬P(w) => ¬P(y * w))
+3. 
+
+A => B
+B :- A
+
+11) Dar una derivación de "alegre" del siguiente programa:
+jugador;ansioso.
+jugador :- ansioso.
+alegre :- jugador,ganador.
+ganador;alegre :- jugador.
+
+jugador;ansioso.
+jugador :- ansioso.
+alegre :- jugador.
+
+
+21) Dado el siguiente razonamiento expresado en lógica proposicional:
+1. ¬e => ¬d	P
+2. a ∧ ¬b	P
+3. e => b	P
+4. a => c    	P
+-------------------
+∴       c ∨ ¬d
+
+Reescribir como un programa en Lógica Clausal Proposicional 
+y demostrar si es válido usando el método de resolución.
+
+5. a S 2
+6. c MPP 2 4
+7. d => e CR 1
+8. d => b SH 7 3
+9. ¬b S 2
+10. ¬d MTT 8 9
+11. 
+
+
+
+
+22) Dado el siguiente razonamiento expresado en lógica proposicional:
+
+1.  ¬b ∨ c		P
+2.  (b => a) => ¬d	P
+3.  d			P
+---------------------------
+∴          ¬(c ⇒ a)
+
+Reescribir como un programa en Lógica Clausal Proposicional 
+y demostrar si es válido usando el método de resolución.
+
+
+c v ¬b
+c :- b
+
+(b => a) => ¬d
+¬(b => a) v ¬d
+¬(¬b v a) v ¬d
+(b ∧ ¬a) v ¬d
+(b v ¬d) ∧ ((¬d v ¬a))
+
+b v ¬d
+
+b :- d
+
+¬d v ¬a
